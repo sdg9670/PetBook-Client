@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 RUN npm install --silent
+RUN npm build
 
 # 소스를 작업폴더로 복사하고 앱 실행
 COPY . /usr/src/app
